@@ -46,7 +46,117 @@
             android:layout_toEndOf="@id/mensaje_Cantidad_text_view"
             android:layout_marginTop="24dp"/>
 
+        <TextView
+            android:id="@+id/cambiar_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/ingresar_dinero_edit_text"
+            android:text="Cambiar a:"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
 
+        <TextView
+            android:id="@+id/USD_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            android:text="USD"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_below="@id/cambiar_text_view"/>
+
+        <ImageView
+            android:id="@+id/usa_imageview"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cambiar_text_view"
+            android:layout_alignBottom="@id/USD_text_view"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@id/USD_text_view"
+            tools:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/eur_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="EUR"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginStart="70dp"
+            android:layout_toEndOf="@id/usa_imageview"
+            android:layout_below="@id/cambiar_text_view"/>
+
+        <ImageView
+            android:id="@+id/reino_imageview"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cambiar_text_view"
+            android:layout_alignBottom="@id/eur_textview"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_toEndOf="@id/eur_textview"
+            tools:src="@drawable/ic_launcher_background" />
+
+
+        <TextView
+            android:id="@+id/resultado_USD_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usa_imageview"
+            android:layout_alignLeft="@id/USD_text_view"
+            android:layout_alignEnd="@id/usa_imageview"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            tools:text="300.00" />
+
+        <TextView
+            android:id="@+id/resultado_EUR_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reino_imageview"
+            android:layout_alignStart="@id/eur_textview"
+            android:layout_alignEnd="@id/reino_imageview"
+            android:layout_marginTop="30dp"
+            android:hint="200.00"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+
+        <Button
+            android:id="@+id/nuevo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nuevo"
+            android:drawableLeft="@drawable/ic_baseline_add_black"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
+            android:id="@+id/convertir_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Conver"
+            android:drawableLeft="@drawable/ic_baseline_refresh_black"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@id/nuevo_button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/convertir_button"
+            android:text="SALIR"
+            android:drawableLeft="@drawable/ic_baseline_cancel_black"
+            />
     </RelativeLayout>
 
 
