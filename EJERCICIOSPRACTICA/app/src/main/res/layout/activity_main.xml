@@ -38,13 +38,13 @@
             android:id="@+id/ingresar_dinero_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="100"
-            android:textSize="16sp"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="4dp"
             android:layout_below="@id/dinero_imageView"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
             android:layout_toEndOf="@id/mensaje_Cantidad_text_view"
-            android:layout_marginTop="24dp"/>
+            android:hint="100"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/cambiar_text_view"
@@ -115,7 +115,7 @@
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:textSize="20dp"
-            tools:text="300.00" />
+            tools:hint="0.00" />
 
         <TextView
             android:id="@+id/resultado_EUR_textview"
@@ -125,7 +125,7 @@
             android:layout_alignStart="@id/eur_textview"
             android:layout_alignEnd="@id/reino_imageview"
             android:layout_marginTop="30dp"
-            android:hint="200.00"
+            android:hint="0.00"
             android:textAlignment="center"
             android:textSize="20dp" />
 
