@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //codigo de nuevo button
         binding.nuevoButton.setOnClickListener {
             reset()
             binding.resultadoUSDTextview.text = USD.toString()
