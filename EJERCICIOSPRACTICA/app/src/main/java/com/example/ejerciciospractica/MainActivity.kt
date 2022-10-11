@@ -1,15 +1,15 @@
 package com.example.ejerciciospractica
 
-import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.ejerciciospractica.databinding.ActivityMainBinding
-import kotlin.math.round
+import kotlin.system.exitProcess
+
 
 class MainActivity : AppCompatActivity() {
-    private var USD: Double = 0.00
-    private var EUR: Double = 0.00
+    private var usd: Double = 0.00
+    private var eur: Double = 0.00
     private var dinero:Double = 0.0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +30,8 @@ class MainActivity : AppCompatActivity() {
                 else {
                 dinero = binding.ingresarDineroEditText.text.toString().toDouble()
                 convertir()
-                binding.resultadoUSDTextview.text = "%.2f".format(USD.toDouble()).toString()
-                binding.resultadoEURTextview.text = "%.2f".format(EUR.toDouble()).toString()
+                binding.resultadoUSDTextview.text = "%.2f".format(usd.toDouble()).toString()
+                binding.resultadoEURTextview.text = "%.2f".format(eur.toDouble()).toString()
             }
         }
 
@@ -39,26 +39,26 @@ class MainActivity : AppCompatActivity() {
         //codigo de nuevo button
         binding.nuevoButton.setOnClickListener {
             reset()
-            binding.resultadoUSDTextview.text = USD.toString()
-            binding.resultadoEURTextview.text = EUR.toString()
+            binding.resultadoUSDTextview.text = usd.toString()
+            binding.resultadoEURTextview.text = eur.toString()
             binding.ingresarDineroEditText.text = null
         }
 
     }
 
     private fun reset(){
-        USD =  0.00
-        EUR =  0.00
+        usd =  0.00
+        eur =  0.00
         dinero = 0.00
     }
 
     private fun convertir(){
-        USD = dinero * 3.24
-        EUR = dinero * 3.94
+        usd = dinero * 3.24
+        eur = dinero * 3.94
     }
 
     private fun salir(){
         finish()
-        System.exit(0);
+        exitProcess(0);
     }
 }
