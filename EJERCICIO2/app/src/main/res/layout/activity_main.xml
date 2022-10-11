@@ -1,18 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <data>
+
+    </data>
+
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/principal_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            tools:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/folio_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/principal_imageview"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="50dp"
+            android:textSize="18sp"
+            android:text="FOLIO :"
+            />
+
+        <EditText
+            android:id="@+id/folio_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/principal_imageview"
+            android:layout_alignBottom="@id/folio_textview"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@id/sueldo_minimo_textview"
+            android:background="@null"
+            android:hint="FOLIO"
+            android:numeric="integer" />
+
+        <TextView
+            android:id="@+id/nombre_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/folio_textview"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp"
+            android:text="Nombre:"/>
+
+        <EditText
+            android:id="@+id/nombre_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/folio_edittext"
+            android:layout_toEndOf="@id/sueldo_minimo_textview"
+            android:layout_alignBottom="@id/nombre_textview"
+            android:background="@null"
+            android:hint="NOMBRE"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="40dp"
+            />
+
+        <TextView
+            android:id="@+id/sueldo_minimo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/nombre_textview"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="50dp"
+            android:textSize="18sp"
+            android:text="Sueldo Minimo:"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombre_edittext"
+            android:layout_alignBottom="@id/sueldo_minimo_textview"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_toEndOf="@id/sueldo_minimo_textview"
+            android:background="@null"
+            android:hint="SUELDO MINIMO" />
+
+
+        <Button
+            android:id="@+id/nuevo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sueldo_minimo_textview"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="10dp"
+            android:text="NUEVO"
+            android:drawableLeft="@drawable/ic_baseline_add_circle"
+            />
+
+
+        <Button
+            android:id="@+id/calcular_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sueldo_minimo_textview"
+            android:layout_toEndOf="@id/nuevo_button"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="10dp"
+            android:text="CALCULAR"
+            android:drawableLeft="@drawable/ic_baseline_check"
+            />
+
+        <Button
+            android:id="@+id/salir_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sueldo_minimo_textview"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_toEndOf="@id/calcular_button"
+            android:drawableLeft="@drawable/ic_baseline_exit_to_app"
+            android:text="SALIR" />
+
+        <TextView
+            android:id="@+id/total_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nuevo_button"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="60dp"
+            android:text="TOTAL A PAGAR :"
+            android:layout_alignParentLeft="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nuevo_button"
+            android:layout_toEndOf="@id/total_textview"
+            android:layout_alignBottom="@id/total_textview"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="60dp"
+            android:layout_alignParentRight="true"
+            android:hint="0.00"
+            />
+
+    </RelativeLayout>
+
+
+ </layout>

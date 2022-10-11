@@ -135,9 +135,9 @@
             android:id="@+id/nuevo_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nuevo"
+            android:layout_alignParentBottom="true"
             android:drawableLeft="@drawable/ic_baseline_add_black"
-            android:layout_alignParentBottom="true"/>
+            android:text="Nuevo" />
 
         <Button
             android:id="@+id/convertir_button"
