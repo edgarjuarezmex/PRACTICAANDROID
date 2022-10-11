@@ -17,7 +17,7 @@
                 android:id="@+id/dinero_imageView"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                tools:src="@drawable/ic_launcher_background"
+                android:src="@drawable/dinero"
                 android:layout_centerHorizontal="true"
                 />
 
@@ -40,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/dinero_imageView"
             android:layout_marginLeft="4dp"
+            android:numeric="decimal"
             android:layout_marginTop="24dp"
             android:layout_marginRight="16dp"
             android:layout_toEndOf="@id/mensaje_Cantidad_text_view"
@@ -78,7 +79,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@id/USD_text_view"
-            tools:src="@drawable/ic_launcher_background" />
+            android:src= "@drawable/usa"/>
 
         <TextView
             android:id="@+id/eur_textview"
@@ -102,7 +103,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
             android:layout_toEndOf="@id/eur_textview"
-            tools:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/reino" />
 
 
         <TextView
@@ -115,7 +116,7 @@
             android:layout_marginTop="30dp"
             android:textAlignment="center"
             android:textSize="20dp"
-            tools:hint="0.00" />
+            android:hint="0.00" />
 
         <TextView
             android:id="@+id/resultado_EUR_textview"
@@ -149,6 +150,7 @@
             android:layout_toEndOf="@id/nuevo_button" />
 
         <Button
+            android:id="@+id/salir_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

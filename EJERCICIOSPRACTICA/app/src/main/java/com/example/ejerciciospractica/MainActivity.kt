@@ -1,9 +1,11 @@
 package com.example.ejerciciospractica
 
+import android.app.PendingIntent.getActivity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.ejerciciospractica.databinding.ActivityMainBinding
+import kotlin.math.round
 
 class MainActivity : AppCompatActivity() {
     private var USD: Double = 0.00
@@ -16,15 +18,20 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        binding.salirButton.setOnClickListener{
+            salir()
+        }
+
         binding.convertirButton.setOnClickListener {
-            if (USD == 0.00){
-                Toast.makeText(this,"FAVOR DE PRESIONAR BOTON NUEVO",Toast.LENGTH_LONG).show()
+
+            if(binding.ingresarDineroEditText.text.toString() == ""){
+                Toast.makeText(this,"FAVOR DE INGRESAR ALGO DE CAMBIO",Toast.LENGTH_LONG).show()
             }
-            else {
+                else {
                 dinero = binding.ingresarDineroEditText.text.toString().toDouble()
                 convertir()
-                binding.USDTextView.text = USD.toString()
-                binding.eurTextview.text = EUR.toString()
+                binding.resultadoUSDTextview.text = "%.2f".format(USD.toDouble()).toString()
+                binding.resultadoEURTextview.text = "%.2f".format(EUR.toDouble()).toString()
             }
         }
 
@@ -46,7 +53,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun convertir(){
-        USD =  dinero * 3.24
+        USD = dinero * 3.24
         EUR = dinero * 3.94
+    }
+
+    private fun salir(){
+        finish()
+        System.exit(0);
     }
 }
