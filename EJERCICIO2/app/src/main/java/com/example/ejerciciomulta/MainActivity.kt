@@ -24,11 +24,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.calcularButton.setOnClickListener(){
             multa = binding.sueldoMinimoEdittext.text.toString().toDouble() * .10
+            folio = binding.folioEdittext.text.toString().toInt()
+            nombre = binding.nombreEdittext.text.toString()
+            openResultado(folio,nombre,multa)
         }
 
         binding.salirButton.setOnClickListener{
             exitProcess(0)
         }
+
+
     }
 
 
@@ -39,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(resultado.folio_KEY,folio)
         intent.putExtra(resultado.nombre_KEY,nombre)
         intent.putExtra(resultado.resultado_KEY,multa)
+
+        startActivity(intent)
     }
 
 }

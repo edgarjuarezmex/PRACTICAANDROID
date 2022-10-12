@@ -6,7 +6,41 @@
     <data>
 
     </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/folio_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="AQUI VA EL FOLIO"
+            android:textColor="@color/black"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/nombre_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/folio_textview"
+            tools:text="AQUI VA EL NOMBRE"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/salario_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/nombre_textview"
+            android:layout_marginTop="50dp"
+            tools:text="AQUI VA EL SUELDO"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>
 
 
 </layout>

@@ -18,6 +18,8 @@ class resultado : AppCompatActivity() {
         setContentView(Binding.root)
 
         val bundle =intent.extras!!
-
+        Binding.folioTextview.text = bundle.getInt(folio_KEY).toString()
+        Binding.nombreTextview.text = bundle.getString(nombre_KEY).toString()
+        Binding.salarioTextview.text = bundle.getDouble(resultado_KEY).toString()
     }
 }
