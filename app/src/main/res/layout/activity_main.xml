@@ -1,18 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/principal_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src="@drawable/ic_launcher_background"
+            />
+
+        <TextView
+            android:id="@+id/nombre_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/principal_imageview"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="NOMBRE DEL ALUMNO"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            />
+
+        <EditText
+            android:id="@+id/nombre_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/principal_imageview"
+            android:layout_toEndOf="@id/nombre_textview"
+            android:layout_alignBottom="@id/nombre_textview"
+            android:background="@null"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/edad_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombre_textview"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="EDAD DEL ALUMNO"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            />
+
+
+        <EditText
+            android:id="@+id/edad_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombre_edittext"
+            android:layout_toEndOf="@id/nombre_textview"
+            android:layout_alignBottom="@id/edad_textview"
+            android:background="@null"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/grupo_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edad_textview"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="GRUPO DEL ALUMNO"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="40dp"
+            android:layout_alignParentLeft="true"
+            />
+
+
+        <EditText
+            android:id="@+id/grupo_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edad_edittext"
+            android:layout_toEndOf="@id/nombre_textview"
+            android:layout_alignBottom="@id/grupo_textview"
+            android:background="@null"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentEnd="true"/>
+
+
+        <Button
+            android:id="@+id/agregar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grupo_textview"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="80dp"
+            android:layout_alignParentLeft="true"
+            android:text="AGREGAR"
+            />
+
+        <Button
+            android:id="@+id/limpiar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/grupo_textview"
+            android:layout_toEndOf="@id/agregar_button"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="50dp"
+            android:text="LIMPIAR"
+            />
+
+        <Button
+            android:id="@+id/ver_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/agregar_button"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="100dp"
+            android:layout_centerInParent="true"
+            android:text="VER ALUMNOS"
+            />
+
+
+    </RelativeLayout>
+
+
+</layout>
